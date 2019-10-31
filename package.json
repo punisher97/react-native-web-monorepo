@@ -19,7 +19,7 @@
     "emulator": "START /B emulator -avd Nexus4 > NUL 2>&1",
     "clean-modules": "RMDIR /Q/S node_modules packages\\mobile\\node_modules packages\\web\\node_modules",
     "prettier": "prettier --write packages/**/*.ts packages/**/*.tsx packages/**/*.js",
-    "precommit": "lint-staged && yarn workspace mobile test"
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "react-native": "0.61.3",
