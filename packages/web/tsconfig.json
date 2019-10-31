@@ -13,7 +13,7 @@
   ],
   "references": [
     {
-      "path": "../components"
+      "path": "../shared"
     }
   ]
 }

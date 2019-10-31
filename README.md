@@ -3,7 +3,7 @@
 
 This is the source code from [this tutorial](https://dev.to/brunolemos/tutorial-100-code-sharing-between-ios-android--web-using-react-native-web-andmonorepo-4pej).
 
-![article-cover](https://user-images.githubusercontent.com/619186/64933790-1fc27680-d81d-11e9-8077-64a1066b7c17.png)
+![article-cover](https://punisher97.github.io/react-native-web-monorepo/screenshot.png)
 
 
 ### How to run

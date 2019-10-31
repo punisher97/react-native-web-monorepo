@@ -9,12 +9,12 @@
     "lint": "eslint .",
     "prestart": "npm run compile",
     "start": "concurrently \"npm run compile -- -w\" \"react-native start\"",
-    "studio": "studio android",
+    "studio": "START /B studio64 android",
     "test": "jest",
     "xcode": "open ios/myprojectname.xcworkspace"
   },
   "dependencies": {
-    "components": "0.0.1",
+    "shared": "0.0.1",
     "react": "16.11.0",
     "react-native": "0.61.3"
   },

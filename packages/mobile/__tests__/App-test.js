@@ -5,7 +5,7 @@
 import 'react-native';
 import React from 'react';
 
-import {App} from 'components/src/App';
+import {App} from 'shared/src/App';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';

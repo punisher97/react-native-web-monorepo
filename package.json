@@ -8,20 +8,54 @@
     ]
   },
   "scripts": {
+    "web": "yarn workspace web start",
+    "mobile": "yarn workspace mobile start",
     "android": "yarn workspace mobile android",
     "compile": "tsc -b --incremental",
     "ios": "yarn workspace mobile  ios",
     "studio": "yarn workspace mobile studio",
     "xcode": "yarn workspace mobile xcode",
-    "rename" : "node bin/rename.js"
+    "rename": "node bin/rename.js",
+    "emulator": "START /B emulator -avd Nexus4 > NUL 2>&1",
+    "clean-modules": "RMDIR /Q/S node_modules packages\\mobile\\node_modules packages\\web\\node_modules",
+    "prettier": "prettier --write packages/**/*.ts packages/**/*.tsx packages/**/*.js",
+    "precommit": "lint-staged && yarn workspace mobile test"
   },
   "dependencies": {
-    "react-native": "0.61.3"
+    "react-native": "0.61.3",
+    "react-native-svg": "^9.13.3",
+    "react-native-vector-icons": "^6.6.0",
+    "react-router-native": "^5.1.2"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.3",
     "@types/react": "16.9.11",
     "@types/react-native": "0.60.22",
+    "@types/react-native-vector-icons": "^6.4.4",
+    "@types/react-router-dom": "^5.1.1",
+    "@types/react-router-native": "^5.1.0",
     "concurrently": "5.0.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "replace-in-file": "^4.2.0",
     "typescript": "3.6.4"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "parser": "typescript",
+    "tabWidth": 2,
+    "semi": true
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "yarn prettier",
+      "git add"
+    ]
   }
 }
