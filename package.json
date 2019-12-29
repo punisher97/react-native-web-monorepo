@@ -22,7 +22,8 @@
     "prettier": "prettier --write packages/**/*.ts packages/**/*.tsx packages/**/*.js",
     "precommit": "lint-staged",
     "pretest": "npm run compile",
-    "test": "yarn workspaces run test"
+    "test": "yarn workspaces run test",
+    "postinstall": "npx react-codemod rename-unsafe-lifecycles"
   },
   "dependencies": {
     "material-bread": "^0.2.5",
