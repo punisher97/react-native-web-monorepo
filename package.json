@@ -17,30 +17,37 @@
     "xcode": "yarn workspace mobile xcode",
     "rename": "node bin/rename.js",
     "emulator": "START /B emulator -avd Nexus4 > NUL 2>&1",
-    "clean-modules": "RMDIR /Q/S node_modules packages\\mobile\\node_modules packages\\web\\node_modules",
+    "clean:modules": "if exist node_modules RMDIR /Q/S node_modules&&if exist packages\\mobile\\node_modules RMDIR /Q/S packages\\mobile\\node_modules&& if exist packages\\web\\node_modules RMDIR /Q/S packages\\web\\node_modules",
+    "android:clean": "yarn workspace mobile android:clean",
     "prettier": "prettier --write packages/**/*.ts packages/**/*.tsx packages/**/*.js",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "pretest": "npm run compile",
+    "test": "yarn workspaces run test"
   },
   "dependencies": {
-    "react-native": "0.61.3",
-    "react-native-svg": "^9.13.3",
-    "react-native-vector-icons": "^6.6.0",
-    "react-router-native": "^5.1.2"
+    "material-bread": "^0.2.5",
+    "react-native": "0.61.5"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/jest-native": "^3.1.0",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/react-native": "^5.0.3",
     "@types/jest": "^24.0.21",
     "@types/node": "^12.12.3",
-    "@types/react": "16.9.11",
-    "@types/react-native": "0.60.22",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.26",
     "@types/react-native-vector-icons": "^6.4.4",
     "@types/react-router-dom": "^5.1.1",
     "@types/react-router-native": "^5.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "concurrently": "5.0.0",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
+    "react-test-renderer": "^16.12.0",
     "replace-in-file": "^4.2.0",
-    "typescript": "3.6.4"
+    "typescript": "3.7.4"
   },
   "prettier": {
     "printWidth": 120,

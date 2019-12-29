@@ -1,0 +1,64 @@
+# test directories
+__tests__
+test
+tests
+powered-test
+
+# asset directories
+docs
+doc
+website
+#images
+#assets
+
+# examples
+example
+examples
+
+# code coverage directories
+coverage
+.nyc_output
+
+# build scripts
+Makefile
+Gulpfile.js
+Gruntfile.js
+
+# configs
+appveyor.yml
+circle.yml
+codeship-services.yml
+codeship-steps.yml
+wercker.yml
+.tern-project
+.gitattributes
+.editorconfig
+.*ignore
+.eslintrc
+.jshintrc
+.flowconfig
+.documentup.json
+.yarn-metadata.json
+.travis.yml
+
+# misc
+*.md
+
+# Iconss
+
+AntDesign.ttf
+Entypo.ttf
+EvilIcons.ttf
+Feather.ttf
+FontAwesome.ttf
+FontAwesome5_Brands.ttf
+FontAwesome5_Regular.ttf
+FontAwesome5_Solid.ttf
+Fontisto.ttf
+Foundation.ttf
+#Ionicons.ttf
+#MaterialCommunityIcons.ttf
+#MaterialIcons.ttf
+Octicons.ttf
+SimpleLineIcons.ttf
+Zocial.ttf

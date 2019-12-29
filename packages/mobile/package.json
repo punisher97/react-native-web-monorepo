@@ -11,12 +11,16 @@
     "start": "concurrently \"npm run compile -- -w\" \"react-native start\"",
     "studio": "START /B studio64 android",
     "test": "jest",
-    "xcode": "open ios/myprojectname.xcworkspace"
+    "xcode": "xed -b ios",
+    "android:clean": "cd android && gradlew clean"
   },
   "dependencies": {
-    "shared": "0.0.1",
-    "react": "16.11.0",
-    "react-native": "0.61.3"
+    "react": "^16.12.0",
+    "react-native": "0.61.5",
+    "react-native-svg": "^9.13.3",
+    "react-native-vector-icons": "^6.6.0",
+    "react-router-native": "^5.1.2",
+    "shared": "0.0.1"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "0.0.5",
@@ -26,6 +30,9 @@
     "react-test-renderer": "16.11.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "@testing-library/react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-router-native)/"
+    ]
   }
 }

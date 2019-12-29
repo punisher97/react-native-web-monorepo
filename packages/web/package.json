@@ -6,9 +6,9 @@
     "material-bread": "^0.2.3",
     "modal-enhanced-react-native-web": "^0.2.0",
     "query-string": "^6.8.3",
-    "react": "16.9.0",
-    "react-art": "16.9.0",
-    "react-dom": "16.9.0",
+    "react": "^16.12.0",
+    "react-art": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-native-svg-web": "^1.0.1",
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "0.11.7",
@@ -22,9 +22,14 @@
     "_start": "react-app-rewired start",
     "prebuild": "npm run compile",
     "build": "react-app-rewired build",
-    "pretest": "npm run compile",
-    "test": "react-app-rewired test",
+    "test": "react-app-rewired test  --env=jsdom",
     "eject": "react-app-rewired eject"
+  },
+  "jest": {
+    "preset": "react-native-web",
+    "transformIgnorePatterns": [
+      "node_modules/?(!material-bread|react-native-vector-icons)/"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,7 +47,7 @@
     "@babel/plugin-transform-runtime": "^7.6.2",
     "babel-plugin-react-native-web": "0.11.7",
     "concurrently": "5.0.0",
-    "react-app-rewired": "2.1.4",
-    "typescript": "3.6.4"
+    "react-app-rewired": "^2.1.5",
+    "typescript": "3.7.4"
   }
 }
