@@ -1,4 +1,4 @@
-package com.myprojectname;
+package com.myprojectcompany.myprojectname;
 
 import com.facebook.react.ReactActivity;
 

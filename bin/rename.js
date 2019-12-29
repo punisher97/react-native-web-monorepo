@@ -5,9 +5,9 @@ const replace = require('replace-in-file');
 process.chdir(require('path').resolve(__dirname, '../packages'));
 
 const BASE_DIRECTORY = './';
-const DEFAULT_COMPANY_NAME = 'procontroles'; //"myprojectname";
-const DEFAULT_PACKAGE_NAME = 'com.procontroles'; //"com.myprojectname";
-const DEFAULT_PROJECT_NAME = 'ITMApp'; //"myprojectname";
+const DEFAULT_COMPANY_NAME = 'myprojectcompany';
+const DEFAULT_PACKAGE_NAME = 'com.myprojectcompany.myprojectname';
+const DEFAULT_PROJECT_NAME = 'myprojectname';
 const VALID_CHARACTERS = /^[a-zA-Z\s]+$/;
 
 const rl = readline.createInterface({
