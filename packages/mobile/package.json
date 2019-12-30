@@ -12,7 +12,7 @@
     "studio": "START /B studio64 android",
     "test": "jest",
     "xcode": "xed -b ios",
-    "android:clean": "cd android && gradlew clean"
+    "clean:android": "cd android && gradlew clean"
   },
   "dependencies": {
     "react": "^16.12.0",

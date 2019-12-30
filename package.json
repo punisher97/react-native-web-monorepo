@@ -18,7 +18,7 @@
     "rename": "node bin/rename.js",
     "emulator": "START /B emulator -avd Nexus4 > NUL 2>&1",
     "clean:modules": "if exist node_modules RMDIR /Q/S node_modules&&if exist packages\\mobile\\node_modules RMDIR /Q/S packages\\mobile\\node_modules&& if exist packages\\web\\node_modules RMDIR /Q/S packages\\web\\node_modules",
-    "android:clean": "yarn workspace mobile android:clean",
+    "clean:android": "yarn workspace mobile clean:android",
     "prettier": "prettier --write packages/**/*.ts packages/**/*.tsx packages/**/*.js",
     "precommit": "lint-staged",
     "pretest": "npm run compile",

@@ -6,8 +6,8 @@ process.chdir(require('path').resolve(__dirname, '../packages'));
 
 const BASE_DIRECTORY = './';
 const DEFAULT_COMPANY_NAME = 'myprojectcompany';
-const DEFAULT_PACKAGE_NAME = 'com.myprojectcompany.myprojectname';
 const DEFAULT_PROJECT_NAME = 'myprojectname';
+const DEFAULT_PACKAGE_NAME = `com.${DEFAULT_COMPANY_NAME}.${DEFAULT_PROJECT_NAME}`;
 const VALID_CHARACTERS = /^[a-zA-Z\s]+$/;
 
 const rl = readline.createInterface({
@@ -29,6 +29,9 @@ const replaceInFile = (from, to) => {
       files: ['./mobile/android/**', './mobile/ios/**', './mobile/*', './web/**'],
       from: new RegExp(from, 'g'),
       to: to,
+      glob: {
+        dot: true,
+      },
     };
     replace(options)
       .then(results => {
@@ -150,8 +153,8 @@ const run = async () => {
   // Close the input
   rl.close();
 
-  updateProjectName(projectName)
-    .then(() => updatePackageName(packageName))
+  updatePackageName(packageName)
+    .then(() => updateProjectName(projectName))
     .then(() => renameProjectFiles(projectName))
     .then(() => renameCompanyFiles(companyName))
     .then(() => updatePackageJSON(packageJsonName))
