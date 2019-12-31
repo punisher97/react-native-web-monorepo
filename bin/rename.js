@@ -146,7 +146,7 @@ const run = async () => {
     throw new Error('ERROR: The company name must only contain letters or spaces');
   }
   const packageJsonName = projectName.replace(/ /g, '-').toLowerCase();
-  projectName = projectName.replace(/ /g, '');
+  projectName = projectName.replace(/ /g, '').toLowerCase();
   companyName = companyName.replace(/ /g, '').toLowerCase();
 
   const packageName = `com.${companyName}.${projectName.toLowerCase()}`;
